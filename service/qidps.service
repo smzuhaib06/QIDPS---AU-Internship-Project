@@ -1,0 +1,12 @@
+[Unit]
+Description=Quantum IoT IDPS
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/Q_IDPS/run.py
+Restart=always
+User=root
+WorkingDirectory=/home/pi/Q_IDPS
+
+[Install]
+WantedBy=multi-user.target
